@@ -2,7 +2,6 @@ var CsvToHtmlTable = CsvToHtmlTable || {};
 
 CsvToHtmlTable = {
     init: function (options) {
-
       options = options || {};
       var csv_path = options.csv_path || "";
       var el = options.element || "table-container";
@@ -11,7 +10,7 @@ CsvToHtmlTable = {
       var datatables_options = options.datatables_options || {};
       var custom_formatting = options.custom_formatting || [];
 
-      $("#" + el).html("<table class='table table-striped table-condensed table-hover' id='" + el + "-table'></table>");
+      $("#" + el).html("<table class='display nowrap table table-striped table-condensed table-hover' id='" + el + "-table' />");
 
       $.when($.get(csv_path)).then(
         function(data){      
